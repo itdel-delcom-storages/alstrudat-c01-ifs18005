@@ -6,4 +6,4 @@
 
 ## Run
 
-`java -cp target/alstrudat-c01-ifs18005-1.0-SNAPSHOT.jar del.alstrudat.App`
+`java -cp target/app.jar del.alstrudat.App`

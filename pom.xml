@@ -17,6 +17,7 @@
  </dependencies>
 
   <build>
+    <finalName>app</finalName>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -24,7 +25,6 @@
             <version>3.2.0</version>
             <configuration>
                 <configLocation>google_checks.xml</configLocation>
-                <suppressionsLocation>/.vscode/suppressions.xml</suppressionsLocation>
             </configuration>
             <executions>
                 <execution>
