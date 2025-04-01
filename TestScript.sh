@@ -43,6 +43,12 @@ while read -r weight; do
   # Simpan output aktual ke dalam folder 'testcases' (actual_output)
   cp "$output_file" "$actual_output_file"
 
+  # Tampilkan isi dari output dan expected output untuk debugging
+  echo "🔍 Actual Output (testcase $index):"
+  cat "$output_file"
+  echo "🔍 Expected Output (testcase $index):"
+  cat "$expected_file"
+
   # Bandingkan output dengan expected output
   if diff -q "$output_file" "$expected_file" > /dev/null; then
     echo "✅ Test case $index passed! (+$weight%)"
@@ -57,7 +63,7 @@ done < testcases/weights.txt
 echo "🎯 Final Score: $total_score%"
 
 # Jika nilai akhir di atas 70%, dianggap lulus
-if [ "$total_score" -ge 50 ]; then
+if [ "$total_score" -ge 70 ]; then
   echo "✅ All tests passed! (Score: $total_score%)"
   exit 0
 else
