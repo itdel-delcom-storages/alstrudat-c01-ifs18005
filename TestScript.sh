@@ -64,3 +64,9 @@ done < testcases/weights.txt
 
 echo "|--------------------------------------------------|"
 echo "🎯 Final Score: $total_score%"
+
+# Jika nilai tidak 100%, buat skrip error
+if [ "$total_score" -ne 100 ]; then
+  echo "❌ Error: Some test cases failed! Exiting with error."
+  exit 1
+fi
