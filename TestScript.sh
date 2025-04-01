@@ -24,6 +24,7 @@ index=1
 # Baca bobot dari file weights.txt
 while read -r weight; do
   echo "|--------------------------------------------------|"
+  echo "Test Case $index"
   input_file="testcases/input$index.txt"
   expected_file="testcases/expected$index.txt"
   output_file="testcases/output$index.txt"
